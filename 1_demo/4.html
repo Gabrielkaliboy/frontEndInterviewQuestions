@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+        function Foo(){
+            getName = function(){
+                alert(1)
+            }
+            return this;
+        }
+        Foo.getName=function(){
+            alert(2)
+        }
+        Foo.prototype.getName=function(){
+            alert(3)
+        }
+        var getName=function(){
+            alert(4)
+        }
+        function getName(){
+            alert(5)
+        }
+        //求下面的输出结果
+        // Foo.getName();//13行给重写了，弹出2
+
+        // getName();//弹出4。这个不懂，虽然他在上面，但是后面紧跟
+        // //着又写了一个同名的函数啊！
+        // Foo().getName();//1。不懂
+        // getName();//注释其他的单独调用时是4。不注释是1
+        //new Foo.getName();//2
+        // new Foo().getName();//3
+        // new new Foo().getName();//3
+    </script>
+</head>
+<body>
+
+</body>
+</html>

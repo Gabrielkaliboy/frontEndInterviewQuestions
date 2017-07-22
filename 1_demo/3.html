@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript">
+        var person=["Admin","21","shangdong"];
+        //下面这个同样可以用于对象，返回的是键
+        for(var i in person){
+            console.log(i);
+            //读取的是脚标
+            //0 1 2
+        }
+        //下面这个对象不适用，因为他的键不是0123脚标
+        for(var i of person){
+            console.log(i);
+            //读取的脚标对应的值
+            //Admin 21 shangdong
+        }
+
+        var person1={"name":"李明","age":23,"sex":"男"};
+        //返回的是键
+        for(var i in person1){
+            console.log(i)
+        }
+        //想法读取里面的值
+        for(var i in person1){
+            console.log(i+":"+person1[i])
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
