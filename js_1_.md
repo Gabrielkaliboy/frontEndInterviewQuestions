@@ -178,3 +178,74 @@ function getName(){
 ### 6. $(window).load and $(document).ready区别
 
 [stack overflow](https://stackoverflow.com/questions/5182016/what-is-the-difference-between-window-load-and-document-ready)
+
+### 7.
+```javascript
+    for(var i=0;i<10;i++){
+        setTimeout(function(){
+            console.log(i);
+        },10)
+    }
+    //输出10个10
+```
+
+### 8. 0-100的数，能被3整除，输出Fizz，能被5整除，输出Buzz，能被3和5整除，输出FizzBuzz，其余输出本身
+```javascript
+    function print(num){
+        var three=num%3,
+            five=num%5,
+            result;
+            
+            if(three==0){
+                if(!(three || five)){
+                    result="FizzBuzz";
+                    return result;
+                }
+                result="Fizz";
+                return result;
+            }
+            else if(five==0){
+                if(!(three || five)){
+                    result="FizzBuzz";
+                    return result;
+                }
+                result="Buzz";
+                return result;
+            }
+            else{
+                return result=num;
+            }
+            console.log(result);
+    }
+```
+
+### 9.
+```javascript
+    var yi=50,
+    mo='bubu',
+    tt1={
+        value:'xjz'
+    },
+    tt2={
+        value:'123'
+    },
+    tt3=tt2;
+
+    function change(yi,mo,tt1,tt2){
+        yi=yi*10;
+        mo='momo';
+        tt1=tt2;
+        tt2.value='xiaojz';
+    }
+
+    change(yi,mo,tt1,tt2);
+
+    console.log(yi);
+    console.log(mo);
+
+    console.log(tt1.value);
+
+    console.log(tt2.value);
+
+    console.log(tt3.value);
+```

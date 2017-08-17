@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var yi=50,
+    mo='bubu',
+    tt1={
+        value:'xjz'
+    },
+    tt2={
+        value:'123'
+    },
+    tt3=tt2;
+
+    function change(yi,mo,tt1,tt2){
+        yi=yi*10;
+        mo='momo';
+        tt1=tt2;
+        tt2.value='xiaojz';
+    }
+
+    change(yi,mo,tt1,tt2);
+
+    console.log(yi);
+    console.log(mo);
+
+    console.log(tt1.value);
+
+    console.log(tt2.value);
+
+    console.log(tt3.value);
+
+</script>
+</html>

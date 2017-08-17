@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function print(num){
+        var three=num%3,
+            five=num%5,
+            result;
+            
+            if(three==0){
+                if(!(three || five)){
+                    result="FizzBuzz";
+                    return result;
+                }
+                result="Fizz";
+                return result;
+            }
+            else if(five==0){
+                if(!(three || five)){
+                    result="FizzBuzz";
+                    return result;
+                }
+                result="Buzz";
+                return result;
+            }
+            else{
+                return result=num;
+            }
+            console.log(result);
+    }
+</script>
+</html>
